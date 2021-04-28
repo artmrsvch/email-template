@@ -1,0 +1,42 @@
+{{#each items}}
+  <mj-wrapper
+    padding="10px 30px 0 30px"
+    background-color="#FFFFFF"
+  >
+    <mj-section
+      border="1px solid #f1f1f1"
+      full-width="full-width"
+      border-radius="5px"
+      padding="10px 0 10px 10px">
+      <mj-group width="65%">
+        <mj-column border-radius="5px" padding="0" vertical-align="middle" width="23%">
+          <mj-image padding="0" align="left" alt="suworld" width="60px"
+            src={{this.image}}></mj-image>
+        </mj-column>
+
+        <mj-column padding="0 0 0 10px" vertical-align="middle" width="77%">
+          <mj-text
+            css-class="order-text"
+            padding="0"
+            align="left"
+            font-size="15px">
+            <p class="order-text">{{this.name}}</p>
+            <p class="order-text"><span>Поставщик:</span> <span style="font-weight: 600">{{this.supplier}}</span></p>
+          </mj-text>
+        </mj-column>
+      </mj-group>
+      <mj-column padding="0" width="35%" vertical-align="middle">
+        <mj-button background-color="#F47E1F"
+          color="#ffffff"
+          css-class="order-button"
+          font-size="13px"
+          align="center"
+          border-radius="3px"
+          href="https://suworld.ru"
+          padding="0 10px 0 10px">Оставить отзыв
+        </mj-button>
+      </mj-column>
+    </mj-section>
+
+  </mj-wrapper>
+{{/each}}
