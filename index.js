@@ -9,18 +9,21 @@ const Handlebars = require("handlebars")
 const orders = [
     {
         name: 'Массажёр для лица',
-        supplier: 'Новая Волна',
-        image: 'http://191n.mj.am/img/191n/3s/x4v.jpg'
+        description: 'Просто у меня есть определенный регламент по времени на выполнение моих задач.',
+        image: 'http://191n.mj.am/img/191n/3s/x4v.jpg',
+        price: '2500'
     },
     {
         name: 'Массажёр для лица',
-        supplier: 'Новая Волна',
-        image: 'http://191n.mj.am/img/191n/3s/x4g.jpg'
+        description: 'Просто у меня есть определенный регламент по времени на выполнение моих задач.',
+        image: 'http://191n.mj.am/img/191n/3s/x4g.jpg',
+        price: '1900'
     },
     {
         name: 'Массажёр для лица',
-        supplier: 'Новая Волна',
-        image: 'http://191n.mj.am/img/191n/3s/x46.jpg'
+        description: 'Просто у меня есть определенный регламент по времени на выполнение моих задач.',
+        image: 'http://191n.mj.am/img/191n/3s/x46.jpg',
+        price: '3800'
     },
 ]
 
@@ -39,8 +42,8 @@ class Email {
     }
 
     createRecentlyOrder({items, orderId, orderStatus}) {
-        const orderBodyMjml = fs.readFileSync(path.join(__dirname, 'order', 'order-body.hbs'), 'utf8')
-        const productsMjml = fs.readFileSync(path.join(__dirname, 'order', 'product-items.hbs'), 'utf8')
+        const orderBodyMjml = fs.readFileSync(path.join(__dirname, 'order', 'rejectOrderBody.hbs'), 'utf8')
+        const productsMjml = fs.readFileSync(path.join(__dirname, 'order', 'rejectOrder.hbs'), 'utf8')
 
         const orderBodyTemplate = Handlebars.compile(orderBodyMjml)
         const productsTemplate = Handlebars.compile(productsMjml)
